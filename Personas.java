@@ -48,4 +48,7 @@ public class Personas {
         }  
         
     }
+    public LocalDate calcularFechaNacimiento(int edad){
+        return LocalDate.now().minusYears(edad);
+    }
 }
