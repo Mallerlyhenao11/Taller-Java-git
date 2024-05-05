@@ -20,18 +20,32 @@ public class Personas {
         return edad;
     }
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad <= 0) {
+            System.out.println("Error en la edad, ponla en positivo");
+        } else {
+            this.edad = edad;
+        }
+               
     }
     public String getNombre() {
         return nombre;
     }
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre == null) {
+            System.out.println("No se permite el campo vacio");
+        } else {
+            this.nombre = nombre;
+        }   
     }
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+        if (fechaNacimiento == null) {
+            System.out.println("No se permite el campo vacio de la fecha de nacimiento");
+        } else {
+            this.fechaNacimiento = fechaNacimiento;
+        }  
+        
     }
 }
