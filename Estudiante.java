@@ -2,7 +2,7 @@
 
 import java.time.LocalDate;
 
-public class Estudiante extends Personas {
+public class Estudiante extends Personas implements Trabajador{
     
     private String grado;
 
@@ -25,5 +25,11 @@ public class Estudiante extends Personas {
         return "El nombre del estudiante es: "+ getNombre() +" su edad es: " + getEdad()+"Su fecha de nacimiento es: " + getFechaNacimiento()+ " y por ultimo esta cursando el grado: " + getGrado();
 
     }
+
+    public void realizarTarea (){
+        System.out.println("Relaizando tarea escolar");
+    }
+
+
        
 }
