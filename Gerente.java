@@ -1,16 +1,17 @@
 public class Gerente extends Empleados {
-
+    
     private float bono;
     private float horas;
-    private float vlrHoras;
+    private float v_horas;
     
- 
-    public Gerente(String nombre, float salario, float bono, float horas, float vlrHoras) {
-        super(nombre, salario);
+    
+    public Gerente(String nombre, float salario, float horas, float bono, float horas2, float v_horas) {
+        super(nombre, salario, horas);
         this.bono = bono;
-        this.horas = horas;
-        this.vlrHoras = vlrHoras;
+        horas = horas2;
+        this.v_horas = v_horas;
     }
+
     
     public float getBono() {
         return bono;
@@ -19,26 +20,7 @@ public class Gerente extends Empleados {
     public void setBono(float bono) {
         this.bono = bono;
     }
-
-    public float getHoras() {
-        return horas;
+    public float calcularSalario(){
+        return  (horas*v_horas)+bono;
     }
-
-    public void setHoras(float horas) {
-        this.horas = horas;
-    }
-
-    public float getVlrHoras() {
-        return vlrHoras;
-    }
-
-    public void setVlrHoras(float vlrHoras) {
-        this.vlrHoras = vlrHoras;
-    }
-
-    public float calcularSalario (){
-        return this.vlrHoras * this.horas;
-    }
-
-    
 }
