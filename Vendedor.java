@@ -1,58 +1,35 @@
 public class Vendedor extends Empleados {
-    private float comision; 
     private float ventas;
-    private float vlrHoras;
-    private float horas;    
-      
+    private float horas;
+    private float v_horas;
     
-    public Vendedor(String nombre, float salario, float comision, float ventas, float vlrHoras, float horas) {
-        super(nombre, salario);
-        this.comision = comision;
+    
+    public Vendedor(String nombre, float salario, float horas, float ventas, float horas2, float v_horas) {
+        super(nombre, salario, horas);
         this.ventas = ventas;
-        this.vlrHoras = vlrHoras;
-        this.horas = horas;
+        horas = horas2;
+        this.v_horas = v_horas;
     }
-
-
-    public float getComision() {
-        return comision;
-    }
-
-
-    public void setComision(float comision) {
-        this.comision = comision;
-    }
-
-
     public float getVentas() {
         return ventas;
     }
-
-
     public void setVentas(float ventas) {
         this.ventas = ventas;
     }
-
-
-    public float getVlrHoras() {
-        return vlrHoras;
-    }
-
-
-    public void setVlrHoras(float vlrHoras) {
-        this.vlrHoras = vlrHoras;
-    }
-
-
     public float getHoras() {
         return horas;
     }
-
-
     public void setHoras(float horas) {
         this.horas = horas;
     }
+    public float getV_horas() {
+        return v_horas;
+    }
+    public void setV_horas(float v_horas) {
+        this.v_horas = v_horas;
+    }
+    public float calcularSalario() {
+        return (v_horas*horas)+(ventas*(15/100));
+    }
 
-    
-    
 }
