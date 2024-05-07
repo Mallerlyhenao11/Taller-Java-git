@@ -1,9 +1,14 @@
-public class Rectangulo {
+public class Rectangulo extends FigurasGeometricas {
 
     private Float base;
     private Float altura;
 
-    
+        
+    public Rectangulo(String nombre, String color, Float base, Float altura) {
+        super(nombre, color);
+        this.base = base;
+        this.altura = altura;
+    }
     public Float getBase() {
         return base;
     }

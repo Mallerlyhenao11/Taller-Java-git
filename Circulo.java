@@ -1,9 +1,14 @@
-public class Circulo  {
+public class Circulo extends FigurasGeometricas {
 
     private Float pi;
     private Float radio;
-
+    
   
+    public Circulo(String nombre, String color, Float pi, Float radio) {
+        super(nombre, color);
+        this.pi = pi;
+        this.radio = radio;
+    }
     public Float getPi() {
         return pi;
     }
