@@ -21,6 +21,11 @@ public class Circulo extends FigurasGeometricas {
     public void setRadio(Float radio) {
         this.radio = radio;
     }
-
+    public float calcularPerimetro(){
+        return (2*pi)*radio;
+    }
+    public float calcularArea(){
+        return pi*(radio*radio);
+    }
     
 }

@@ -21,6 +21,12 @@ public class Rectangulo extends FigurasGeometricas {
     public void setAltura(Float altura) {
         this.altura = altura;
     }
+    public float calcularArea(){
+        return this.altura * this.base;
+    }
+    public float calcularPerimetro(){
+        return 2*(this.base+this.altura);
+    }
 
     
 }
